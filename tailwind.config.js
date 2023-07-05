@@ -5,5 +5,19 @@ module.exports = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#590BD8',
+        primaryDarker: '#312A4F',
+        primaryLighter: '#DDD5EA',
+        grayPrimary: '#717171',
+        graySecondary: '#BBBFBF',
+      },
+      textColor: {
+        dark: '#717171',
+      }
+    }
+  },
   plugins: [],
 }
