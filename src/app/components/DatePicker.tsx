@@ -30,6 +30,7 @@ function DatePicker(
       <_DatePicker
         locale="pt-BR"
         wrapperClassName="w-full"
+        dateFormat={'dd/MM/yyyy'}
         className={datePickerClassName}
         enableTabLoop={false}
         {...props}
