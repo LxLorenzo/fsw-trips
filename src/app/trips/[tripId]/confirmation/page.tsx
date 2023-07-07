@@ -19,6 +19,8 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
 
   const { status, data } = useSession()
 
+  console.log(data?.user)
+
   const searchParams = useSearchParams()
 
   useEffect(() => {
@@ -70,7 +72,7 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
       })
     }
 
-    router.push('/')
+    router.push('/my-trips')
 
     toast.success('Reserva realizada com sucesso!', {
       position: 'bottom-center',
