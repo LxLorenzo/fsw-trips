@@ -47,7 +47,7 @@ const Header = () => {
           {toggle && (
             <div className="absolute z-50 top-14 right-0 w-[150px] h-[150px] dark:bg-gray-900 bg-white rounded-xl shadow-md flex flex-col justify-center items-center text-center gap-1 px-3">
               <Link
-                className="text-sm font-semibold "
+                className="text-sm font-semibold dark:hover:text-primary transition"
                 href="/my-trips"
                 onClick={() => setToggle(false)}
               >
@@ -55,7 +55,7 @@ const Header = () => {
               </Link>
               <ThemeSwitcher />
               <button
-                className="text-sm font-semibold border-t border-t-graySecondary pt-3 w-full"
+                className="text-sm font-semibold border-t border-t-graySecondary pt-3 w-full dark:hover:text-primary transition"
                 onClick={() => {
                   setToggle(false)
                   signOut()

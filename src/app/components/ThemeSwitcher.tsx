@@ -22,7 +22,7 @@ const ThemeSwitcher = ({ className }: any) => {
           strokeWidth={1.5}
           stroke="currentColor"
           fill="none"
-          className="w-5 h-5 hover:fill-primary dark:hover:fill-walterWhite transition-all"
+          className="w-5 h-5 hover:fill-primary dark:hover:fill-walterWhite transition"
         >
           <path
             strokeLinecap="round"
@@ -37,7 +37,7 @@ const ThemeSwitcher = ({ className }: any) => {
           strokeWidth={1.5}
           stroke="currentColor"
           fill="none"
-          className="w-5 h-5 hover:fill-primary dark:hover:fill-walterWhite transition-all"
+          className="w-5 h-5 hover:fill-primary dark:hover:fill-walterWhite transition"
         >
           <path
             strokeLinecap="round"
