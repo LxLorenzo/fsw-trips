@@ -50,7 +50,7 @@ const UserReservationItem = ({
         </div>
 
         <div className="flex flex-col">
-          <h2 className="text-xl text-primaryDarker font-semibold">
+          <h2 className="text-xl text-primaryDarker dark:text-walterWhite font-semibold">
             {trip.name}
           </h2>
           <div className="flex items-center gap-1">
@@ -62,7 +62,7 @@ const UserReservationItem = ({
         </div>
       </div>
 
-      <div className="flex flex-col mt-5 text-primaryDarker">
+      <div className="flex flex-col mt-5 text-primaryDarker dark:text-walterWhite">
         <h3 className="text-sm font-medium">Data</h3>
         <div className="flex items-center gap-1">
           <p className="text-sm">
@@ -81,12 +81,14 @@ const UserReservationItem = ({
         <h3 className="mt-5 text-sm font-medium">Hóspedes</h3>
         <p className="text-sm pb-5">{reservation.guests} hóspedes</p>
 
-        <h3 className="font-semibold text-primaryDarker mt-3 pt-5 border-t border-solid border-graySecondary">
+        <h3 className="font-semibold text-primaryDarker dark:text-walterWhite mt-3 pt-5 border-t border-solid border-graySecondary">
           Informações sobre o preço
         </h3>
 
         <div className="flex justify-between mt-1">
-          <p className="text-primaryDarker text-sm mt-2">Total:</p>
+          <p className="text-primaryDarker dark:text-walterWhite text-sm mt-2">
+            Total:
+          </p>
           <p className="font-medium text-sm">
             R${Number(reservation.totalPaid)}
           </p>

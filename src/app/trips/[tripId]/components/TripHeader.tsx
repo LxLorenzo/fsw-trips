@@ -19,7 +19,7 @@ const TripHeader = ({ trip }: TripHeaderProps) => {
       </div>
 
       <div className="flex flex-col p-5">
-        <h1 className="text-primaryDarker font-semibold text-xl">
+        <h1 className="text-primaryDarker dark:text-walterWhite font-semibold text-xl">
           {trip.name}
         </h1>
 

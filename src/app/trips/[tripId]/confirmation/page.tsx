@@ -19,8 +19,6 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
 
   const { status, data } = useSession()
 
-  console.log(data?.user)
-
   const searchParams = useSearchParams()
 
   useEffect(() => {
@@ -85,11 +83,13 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
 
   return (
     <div className="container mx-auto p-5">
-      <h1 className="font-semibold text-xl text-primaryDarker">Sua viagem</h1>
+      <h1 className="font-semibold text-xl text-primaryDarker dark:text-walterWhite">
+        Sua viagem
+      </h1>
 
       {/* CARD */}
       <div className="flex flex-col p-5 mt-5 border-grayLighter border-solid border shadow-lg rounded-lg">
-        <div className="flex items-center gap-3 pb-5 border-b border-grayLighter border-solid">
+        <div className="flex items-center gap-5 pb-5 border-b border-grayLighter border-solid">
           <div className="relative h-[106px] w-[124px]">
             <Image
               src={trip.coverImage}
@@ -101,7 +101,7 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
           </div>
 
           <div className="flex flex-col">
-            <h2 className="text-xl text-primaryDarker font-semibold">
+            <h2 className="text-xl text-primaryDarker dark:text-walterWhite font-semibold">
               {trip.name}
             </h2>
             <div className="flex items-center gap-1">
@@ -113,7 +113,7 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
           </div>
         </div>
 
-        <h3 className="font-semibold text-lg text-primaryDarker mt-3">
+        <h3 className="font-semibold text-lg text-primaryDarker dark:text-walterWhite mt-3">
           Informações sobre o preço
         </h3>
 
@@ -123,7 +123,7 @@ const TripConfirmation = ({ params }: { params: { tripId: string } }) => {
         </div>
       </div>
 
-      <div className="flex flex-col mt-5 text-primaryDarker">
+      <div className="flex flex-col mt-5 text-primaryDarker dark:text-walterWhite">
         <h3 className="font-semibold">Data</h3>
         <div className="flex items-center gap-1 mt-1">
           <p>{format(startDate, "dd 'de' MMMM", { locale: ptBR })}</p>

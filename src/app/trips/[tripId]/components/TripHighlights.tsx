@@ -7,7 +7,9 @@ interface TripHighlightsProps {
 const TripHighlights = ({ highlights }: TripHighlightsProps) => {
   return (
     <div className="flex flex-col px-5">
-      <h2 className="text-primaryDarker font-semibold mb-2">Destaques</h2>
+      <h2 className="text-primaryDarker dark:text-walterWhite font-semibold mb-2">
+        Destaques
+      </h2>
       <div className="flex flex-wrap gap-y-3">
         {highlights.map((highlight, index) => (
           <div key={highlight} className="flex items-center gap-2 w-1/2">

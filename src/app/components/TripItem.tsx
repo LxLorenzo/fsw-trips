@@ -30,7 +30,7 @@ const TripItem = ({ trip }: TripItemProps) => {
         />
       </div>
 
-      <h3 className="text-primaryDarker font-medium text-sm mt-2">
+      <h3 className="text-primaryDarker dark:text-walterWhite font-medium text-sm mt-2">
         {trip.name}
       </h3>
       <div className="flex items-center gap-1 my-1">
