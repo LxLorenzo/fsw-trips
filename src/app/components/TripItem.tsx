@@ -35,10 +35,12 @@ const TripItem = ({ trip }: TripItemProps) => {
       </h3>
       <div className="flex items-center gap-1 my-1">
         <ReactCountryFlag countryCode={trip.countryCode} svg />
-        <p className="text-xs text-grayPrimary">{trip.location}</p>
+        <p className="text-xs text-grayPrimary dark:text-graySecondary">
+          {trip.location}
+        </p>
       </div>
 
-      <p className="text-xs text-grayPrimary border-b border-b-graySecondary pb-3">
+      <p className="text-xs text-grayPrimary dark:text-graySecondary border-b border-b-graySecondary pb-3">
         <span className="text-primary font-medium">
           R${trip.pricePerDay.toString()}
         </span>{' '}

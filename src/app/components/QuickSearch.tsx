@@ -2,6 +2,7 @@
 
 import { useTheme } from 'next-themes'
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 const QuickSearch = () => {
@@ -18,17 +19,22 @@ const QuickSearch = () => {
       </div>
 
       <div className="flex w-full justify-between mt-5">
-        <div className="flex flex-col items-center gap-1">
+        <Link
+          href={'/trips/search?search=hotel'}
+          className="flex flex-col items-center gap-1 hover:text-grayTerciary transition-all dark:hover:text-graySecondary"
+        >
           <Image
             width={35}
             height={35}
             src={theme === 'dark' ? '/hotel-icon-dark.svg' : '/hotel-icon.svg'}
             alt="Hotel"
           />
-
-          <p className="text-sm">Resorts</p>
-        </div>
-        <div className="flex flex-col items-center gap-1">
+          <p className="text-sm">Hotéis</p>
+        </Link>
+        <Link
+          href={'/trips/search?search=chalé'}
+          className="flex flex-col items-center gap-1 hover:text-grayTerciary transition-all dark:hover:text-graySecondary"
+        >
           <Image
             width={35}
             height={35}
@@ -39,10 +45,12 @@ const QuickSearch = () => {
             }
             alt="Hotel"
           />
-
           <p className="text-sm">Chalés</p>
-        </div>
-        <div className="flex flex-col items-center gap-1">
+        </Link>
+        <Link
+          href={'/trips/search?search=pousada'}
+          className="flex flex-col items-center gap-1 hover:text-grayTerciary transition-all dark:hover:text-graySecondary"
+        >
           <Image
             width={35}
             height={35}
@@ -53,10 +61,12 @@ const QuickSearch = () => {
             }
             alt="Hotel"
           />
-
           <p className="text-sm">Pousadas</p>
-        </div>
-        <div className="flex flex-col items-center gap-1">
+        </Link>
+        <Link
+          href={'/trips/search?search=fazenda'}
+          className="flex flex-col items-center gap-1 hover:text-grayTerciary transition-all dark:hover:text-graySecondary"
+        >
           <Image
             width={35}
             height={35}
@@ -67,9 +77,8 @@ const QuickSearch = () => {
             }
             alt="Hotel"
           />
-
           <p className="text-sm">Fazendas</p>
-        </div>
+        </Link>
       </div>
     </section>
   )
