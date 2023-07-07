@@ -17,6 +17,7 @@ module.exports = {
         grayPrimary: '#717171',
         graySecondary: '#BBBFBF',
         walterWhite: '#F5F5F5',
+        cancelRed: '#FE3838',
       },
       textColor: {
         dark: '#717171',

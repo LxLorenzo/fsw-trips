@@ -45,7 +45,14 @@ const Header = () => {
             className="rounded-full shadow-md"
           />
           {toggle && (
-            <div className="absolute z-50 top-14 left-0 w-full h-full bg-white rounded-lg shadow-md flex flex-col justify-center items-center">
+            <div className="absolute z-50 top-14 left-0 w-[100px] h-[100px] bg-white rounded-lg shadow-md flex flex-col justify-center items-center text-center gap-4">
+              <Link
+                className="text-primary text-sm font-semibold"
+                href="/my-trips"
+                onClick={() => setToggle(false)}
+              >
+                Minhas viagens
+              </Link>
               <button
                 className="text-primary text-sm font-semibold"
                 onClick={() => {

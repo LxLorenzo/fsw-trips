@@ -1,18 +1,15 @@
-import { Trip } from '@prisma/client'
 import React from 'react'
 
 interface TripDescriptionProps {
-  trip: Trip
+  description: string
 }
-const TripDescription = ({ trip }: TripDescriptionProps) => {
+const TripDescription = ({ description }: TripDescriptionProps) => {
   return (
     <div className="flex flex-col p-5">
       <h2 className="text-primaryDarker text-md font-semibold">
         Sobre a Viagem
       </h2>
-      <p className="text-primaryDarker text-sm mt-1 leading-5">
-        {trip.description}
-      </p>
+      <p className="text-primaryDarker text-sm mt-1 leading-5">{description}</p>
     </div>
   )
 }
