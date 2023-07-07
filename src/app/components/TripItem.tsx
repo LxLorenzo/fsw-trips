@@ -1,16 +1,25 @@
+'use client'
+
 import { Trip } from '@prisma/client'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import ReactCountryFlag from 'react-country-flag'
+import Button from './Button'
+import { useRouter } from 'next/navigation'
 
 interface TripItemProps {
   trip: Trip
 }
 
-const TripItem = ({ trip }: TripItemProps) => (
-  <Link href={`/trips/${trip.id}`}>
-    <div className="flex flex-col">
+const TripItem = ({ trip }: TripItemProps) => {
+  const router = useRouter()
+
+  const handleItemClick = () => {
+    router.push(`/trips/${trip.id}`)
+  }
+
+  return (
+    <div className="flex flex-col border border-graySecondary p-5 rounded-xl shadow-md">
       <div className="relative h-[280px] w-[280px]">
         <Image
           src={trip.coverImage}
@@ -29,14 +38,17 @@ const TripItem = ({ trip }: TripItemProps) => (
         <p className="text-xs text-grayPrimary">{trip.location}</p>
       </div>
 
-      <p className="text-xs text-grayPrimary">
+      <p className="text-xs text-grayPrimary border-b border-b-graySecondary pb-3">
         <span className="text-primary font-medium">
           R${trip.pricePerDay.toString()}
         </span>{' '}
         por noite
       </p>
+      <Button className="w-full mt-4" onClick={handleItemClick}>
+        Ver mais
+      </Button>
     </div>
-  </Link>
-)
+  )
+}
 
 export default TripItem
