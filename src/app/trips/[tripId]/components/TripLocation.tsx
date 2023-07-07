@@ -19,7 +19,7 @@ const TripLocation = ({ location, locationDescription }: TripLocationProps) => {
       <h3 className="text-sm font-semibold text-primaryDarker dark:text-walterWhite mt-5">
         {location}
       </h3>
-      <p className="text-xs text-primaryDarker mt-1 leading-5">
+      <p className="text-xs text-primaryDarker dark:text-graySecondary mt-1 leading-5">
         {locationDescription}
       </p>
 

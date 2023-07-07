@@ -5,8 +5,7 @@ import { useTheme } from 'next-themes'
 import { twMerge } from 'tailwind-merge'
 
 const ThemeSwitcher = ({ className }: any) => {
-  const { systemTheme, theme, setTheme } = useTheme()
-  const currentTheme = theme === 'system' ? systemTheme : theme
+  const { theme, setTheme } = useTheme()
 
   const _className = twMerge('p-2 rounded-md ', className)
 
@@ -15,7 +14,7 @@ const ThemeSwitcher = ({ className }: any) => {
       className={_className}
       onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
     >
-      {currentTheme === 'light' ? (
+      {theme === 'light' ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

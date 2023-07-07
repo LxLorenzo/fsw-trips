@@ -3,17 +3,32 @@
 import { signIn, signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import ThemeSwitcher from './ThemeSwitcher'
 
 const Header = () => {
   const [toggle, setToggle] = useState(false)
-
+  const menuRef = useRef<HTMLDivElement>(null)
   const { status, data: session } = useSession()
 
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setToggle(false)
+      }
+    }
+    document.addEventListener('click', handleClickOutside)
+    return () => {
+      document.removeEventListener('click', handleClickOutside)
+    }
+  }, [])
+
   return (
-    <div className="container mx-auto px-5 h-[93px] flex justify-between items-center text-primary dark:text-walterWhite">
+    <nav
+      ref={menuRef}
+      className="container mx-auto px-5 h-[93px] flex justify-between items-center text-primary dark:text-walterWhite"
+    >
       <Link href="/">
         <Image
           src="/logo.svg"
@@ -67,7 +82,7 @@ const Header = () => {
           )}
         </div>
       )}
-    </div>
+    </nav>
   )
 }
 

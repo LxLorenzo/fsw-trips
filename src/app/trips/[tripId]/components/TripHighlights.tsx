@@ -15,7 +15,9 @@ const TripHighlights = ({ highlights }: TripHighlightsProps) => {
           <div key={highlight} className="flex items-center gap-2 w-1/2">
             <Image src="/check.svg" alt="Check" width={15} height={15} />
 
-            <p className="text-grayPrimary text-xs">{highlight}</p>
+            <p className="text-grayPrimary dark:text-graySecondary text-xs">
+              {highlight}
+            </p>
           </div>
         ))}
       </div>

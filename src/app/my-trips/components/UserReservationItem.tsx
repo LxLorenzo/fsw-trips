@@ -55,7 +55,7 @@ const UserReservationItem = ({
           </h2>
           <div className="flex items-center gap-1">
             <ReactCountryFlag countryCode={trip.countryCode} svg />
-            <p className="text-xs text-grayPrimary underline">
+            <p className="text-xs text-grayPrimary dark:text-graySecondary underline">
               {trip.location}
             </p>
           </div>
