@@ -28,10 +28,14 @@ export default function RootLayout({
         <NextAuthProvider>
           <ToastProvider>
             <ThemeProvider>
-              <Header />
-              <div className="border-b border-b-graySecondary" />
-              {children}
-              <Footer />
+              <div className="flex flex-col h-screen">
+                <div className="h-[94px]">
+                  <Header />
+                </div>
+                <div className="border-b border-b-graySecondary" />
+                <div className="flex-1">{children}</div>
+                <Footer />
+              </div>
             </ThemeProvider>
           </ToastProvider>
         </NextAuthProvider>
