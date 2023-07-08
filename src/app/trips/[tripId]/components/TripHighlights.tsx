@@ -11,7 +11,7 @@ const TripHighlights = ({ highlights }: TripHighlightsProps) => {
         Destaques
       </h2>
       <div className="flex flex-wrap gap-y-3">
-        {highlights.map((highlight, index) => (
+        {highlights.map((highlight, _index) => (
           <div key={highlight} className="flex items-center gap-2 w-1/2">
             <Image src="/check.svg" alt="Check" width={15} height={15} />
 

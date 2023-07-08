@@ -8,6 +8,5 @@ export const prisma =
     log: ['query'],
   })
 
-if (process.env.NODE_ENV !== 'production') {
-  globalForPrisma.prisma
-}
+// eslint-disable-next-line no-unused-expressions
+if (process.env.NODE_ENV !== 'production') globalForPrisma.prisma
