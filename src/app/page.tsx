@@ -7,7 +7,6 @@ export default function Home() {
     <div>
       <TripSearch />
       <QuickSearch />
-      {/* @ts-expect-error Server Component */}
       <RecommendedTrips />
     </div>
   )
