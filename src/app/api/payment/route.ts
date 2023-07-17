@@ -24,7 +24,7 @@ export async function POST(request: Request) {
   } = req
 
   const session = await stripe.checkout.sessions.create({
-    success_url: process.env.HOST_URL!,
+    success_url: '/my-trips',
     metadata: {
       tripId,
       startDate,
@@ -50,7 +50,10 @@ export async function POST(request: Request) {
     mode: 'payment',
   })
 
-  return new NextResponse(JSON.stringify({ sessionId: session.id }), {
-    status: 200,
-  })
+  return new NextResponse(
+    JSON.stringify({
+      sessionId: session.id,
+    }),
+    { status: 200 },
+  )
 }
