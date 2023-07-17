@@ -6,8 +6,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const QuickSearch = () => {
-  const { systemTheme, theme } = useTheme()
-  const currentTheme = theme === 'system' ? systemTheme : theme
+  const { theme } = useTheme()
   return (
     <section className="container mx-auto p-5 text-grayPrimary dark:text-walterWhite ">
       <div className="flex items-center">
@@ -18,7 +17,7 @@ const QuickSearch = () => {
         <div className="h-[1px] w-full bg-graySecondary" />
       </div>
 
-      <div className="flex w-full justify-between mt-5 lg:mt-10 lg:justify-center gap-40">
+      <div className="flex w-full justify-between mt-5 lg:mt-10 lg:justify-center lg:gap-40">
         <Link
           href={'/trips/search?search=hotel'}
           className="flex flex-col items-center gap-1 hover:text-grayTerciary transition-all dark:hover:text-graySecondary"

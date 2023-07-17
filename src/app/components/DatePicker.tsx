@@ -1,4 +1,4 @@
-import { LegacyRef, forwardRef } from 'react'
+import { forwardRef } from 'react'
 import { twMerge } from 'tailwind-merge'
 import _DatePicker, {
   ReactDatePickerProps,
@@ -15,10 +15,7 @@ interface InputProps extends ReactDatePickerProps {
   errorMessage?: string
 }
 
-function DatePicker(
-  { className, error, errorMessage, ...props }: InputProps,
-  ref: LegacyRef<HTMLInputElement> | undefined,
-) {
+function DatePicker({ className, error, errorMessage, ...props }: InputProps) {
   const datePickerClassName = twMerge(
     'rounded-lg border dark:border-primaryDarker border-gray-300 bg-white dark:bg-walterWhite p-2 text-sm font-normal text-primaryDarker dark:text-primary placeholder-black dark:placeholder-opacity-50 placeholder-opacity-20 outline-none transition-all focus:ring-1 focus:ring-primary',
     error ? 'border-red-500' : '',

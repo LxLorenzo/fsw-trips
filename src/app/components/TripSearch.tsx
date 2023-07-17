@@ -74,12 +74,16 @@ const TripSearch = () => {
                 onValueChange={field.onChange as any}
                 value={field.value}
                 onBlur={field.onBlur}
+                className="w-full"
               />
             )}
           />
         </div>
 
-        <Button onClick={handleSubmit(onSubmit)} className="w-1/2 lg:h-fit">
+        <Button
+          onClick={handleSubmit(onSubmit)}
+          className="w-full lg:w-1/2 lg:h-fit"
+        >
           Buscar
         </Button>
       </div>
