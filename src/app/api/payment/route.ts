@@ -24,7 +24,7 @@ export async function POST(request: Request) {
   } = req
 
   const session = await stripe.checkout.sessions.create({
-    success_url: '/my-trips',
+    success_url: 'https://fsw-trips-lx-lorenzo.vercel.app/my-trips',
     metadata: {
       tripId,
       startDate,
