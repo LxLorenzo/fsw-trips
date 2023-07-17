@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <nav
       ref={menuRef}
-      className="container mx-auto px-5 h-[93px] flex justify-between items-center text-primary dark:text-walterWhite"
+      className="container mx-auto px-5 h-[93px] flex justify-between items-center text-primary dark:text-walterWhite lg:border-b lg:border-graySecondary"
     >
       <Link href="/">
         <Image
@@ -46,7 +46,7 @@ const Header = () => {
         </div>
       )}
       {status === 'authenticated' && session.user && (
-        <div className="relative flex items-center gap-3 border-graySecondary border rounded-full px-4 py-3">
+        <div className="relative flex items-center gap-3 border-graySecondary border rounded-full p-2 px-3">
           <AiOutlineMenu
             onClick={() => setToggle((prev) => !prev)}
             className="cursor-pointer dark:text-walterWhite text-grayPrimary"

@@ -10,7 +10,7 @@ const QuickSearch = () => {
   const currentTheme = theme === 'system' ? systemTheme : theme
   return (
     <section className="container mx-auto p-5 text-grayPrimary dark:text-walterWhite ">
-      <div className="flex justify-center items-center">
+      <div className="flex items-center">
         <div className="h-[1px] w-full bg-graySecondary" />
         <h2 className="px-5 font-medium whitespace-nowrap">
           Tente pesquisar por
@@ -18,7 +18,7 @@ const QuickSearch = () => {
         <div className="h-[1px] w-full bg-graySecondary" />
       </div>
 
-      <div className="flex w-full justify-between mt-5">
+      <div className="flex w-full justify-between mt-5 lg:mt-10 lg:justify-center gap-40">
         <Link
           href={'/trips/search?search=hotel'}
           className="flex flex-col items-center gap-1 hover:text-grayTerciary transition-all dark:hover:text-graySecondary"
@@ -29,7 +29,7 @@ const QuickSearch = () => {
             src={theme === 'dark' ? '/hotel-icon-dark.svg' : '/hotel-icon.svg'}
             alt="Hotel"
           />
-          <p className="text-sm">Hotéis</p>
+          <p className="text-sm lg:text-base">Hotéis</p>
         </Link>
         <Link
           href={'/trips/search?search=chalé'}
@@ -38,14 +38,10 @@ const QuickSearch = () => {
           <Image
             width={35}
             height={35}
-            src={
-              currentTheme === 'dark'
-                ? '/hotel-icon-dark.svg'
-                : '/hotel-icon.svg'
-            }
+            src={theme === 'dark' ? '/hotel-icon-dark.svg' : '/hotel-icon.svg'}
             alt="Hotel"
           />
-          <p className="text-sm">Chalés</p>
+          <p className="text-sm lg:text-base">Chalés</p>
         </Link>
         <Link
           href={'/trips/search?search=pousada'}
@@ -54,14 +50,10 @@ const QuickSearch = () => {
           <Image
             width={35}
             height={35}
-            src={
-              currentTheme === 'dark'
-                ? '/hotel-icon-dark.svg'
-                : '/hotel-icon.svg'
-            }
+            src={theme === 'dark' ? '/hotel-icon-dark.svg' : '/hotel-icon.svg'}
             alt="Hotel"
           />
-          <p className="text-sm">Pousadas</p>
+          <p className="text-sm lg:text-base">Pousadas</p>
         </Link>
         <Link
           href={'/trips/search?search=fazenda'}
@@ -70,14 +62,10 @@ const QuickSearch = () => {
           <Image
             width={35}
             height={35}
-            src={
-              currentTheme === 'dark'
-                ? '/hotel-icon-dark.svg'
-                : '/hotel-icon.svg'
-            }
+            src={theme === 'dark' ? '/hotel-icon-dark.svg' : '/hotel-icon.svg'}
             alt="Hotel"
           />
-          <p className="text-sm">Fazendas</p>
+          <p className="text-sm lg:text-base">Fazendas</p>
         </Link>
       </div>
     </section>

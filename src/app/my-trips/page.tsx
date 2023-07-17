@@ -36,7 +36,6 @@ const MyTrips = () => {
     }
 
     fetchReservations()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status])
 
   const [loading, setLoading] = useState(true)
@@ -47,28 +46,30 @@ const MyTrips = () => {
 
   return (
     <div className="container mx-auto p-5">
-      <h1 className="text-xl text-primaryDarker dark:text-walterWhite font-semibold">
+      <h1 className="text-xl text-primaryDarker dark:text-walterWhite font-semibold lg:mb-5">
         Minhas Viagens
       </h1>
       <Suspense fallback={<></>}>
         {loading ? (
           <Loading />
         ) : reservations.length > 0 ? (
-          reservations?.map((reservation) => (
-            <LazyReservationItem
-              key={reservation.id}
-              fetchReservations={fetchReservations}
-              reservation={reservation}
-            />
-          ))
+          <div className="flex flex-col lg:grid lg:grid-cols-3 lg:gap-14">
+            {reservations?.map((reservation) => (
+              <LazyReservationItem
+                key={reservation.id}
+                fetchReservations={fetchReservations}
+                reservation={reservation}
+              />
+            ))}
+          </div>
         ) : (
-          <div className="flex flex-col">
+          <div className="flex flex-col lg:max-w-[500px]">
             <p className="mt-2 font-medium text-primaryDarker dark:text-walterWhite">
               Você ainda não tem nenhuma reserva!
             </p>
 
             <Link href="/">
-              <Button className="w-full mt-2">Fazer reserva</Button>
+              <Button className="w-full mt-2 lg:mt-5">Fazer reserva</Button>
             </Link>
           </div>
         )}

@@ -32,7 +32,6 @@ export default function RootLayout({
                 <div className="h-[94px]">
                   <Header />
                 </div>
-                <div className="border-b border-b-graySecondary" />
                 <div className="flex-1">{children}</div>
                 <Footer />
               </div>

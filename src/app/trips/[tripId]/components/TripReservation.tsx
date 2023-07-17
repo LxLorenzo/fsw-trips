@@ -90,8 +90,12 @@ const TripReservation = ({
   const endDate = watch('endDate')
 
   return (
-    <div className="flex flex-col px-5">
-      <div className="flex gap-3">
+    <div className="flex flex-col px-5 lg:min-w-[380px] lg:p-5 lg:border-graySecondary lg:border lg:rounded-lg lg:shadow-md">
+      <p className="text-xl hidden text-primaryDarker dark:text-graySecondary mb-4 lg:block">
+        <span className="font-semibold">R${pricePerDay}</span> por dia
+      </p>
+
+      <div className="flex gap-4">
         <Controller
           name="startDate"
           rules={{
@@ -153,7 +157,7 @@ const TripReservation = ({
         error={!!errors.guests?.message}
         errorMessage={errors?.guests?.message}
         placeholder={`Número de hóspedes: ${maxGuests}`}
-        className="mt-2.5"
+        className="mt-4"
         onKeyPress={(event) => {
           const keyCode = event.keyCode || event.which
           const keyValue = String.fromCharCode(keyCode)
@@ -164,7 +168,7 @@ const TripReservation = ({
         }}
       />
 
-      <div className="flex justify-between mt-2.5">
+      <div className="flex justify-between mt-3">
         <p className="font-medium text-sm text-primaryDarker dark:text-walterWhite">
           Total
           {startDate && endDate
@@ -178,7 +182,7 @@ const TripReservation = ({
         </p>
       </div>
 
-      <div className="pb-10 border-b border-b-graySecondary w-full">
+      <div className="pb-10 border-b border-b-graySecondary w-full lg:border-none lg:pb-0">
         <Button
           onClick={() => handleSubmit(onSubmit)()}
           className="mt-3 w-full"
