@@ -12,7 +12,7 @@ const ThemeSwitcher = ({ className }: any) => {
   return (
     <button
       className={_className}
-      onClick={() => (theme === 'dark' ? setTheme('light') : setTheme('dark'))}
+      onClick={() => (theme === 'light' ? setTheme('dark') : setTheme('light'))}
     >
       {theme === 'light' ? (
         <svg
