@@ -7,7 +7,7 @@ import { twMerge } from 'tailwind-merge'
 const ThemeSwitcher = ({ className }: any) => {
   const { theme, setTheme } = useTheme()
 
-  const _className = twMerge('p-2 rounded-md ', className)
+  const _className = twMerge('p-2 rounded-md', className)
 
   return (
     <button
